@@ -14,18 +14,18 @@
  
   <div class="container">
  
-  <h1 class="text-success">Liste des Materiels</h1>
-   <h2>Département choisi : ${depchoisi.titre}</h2><br/>
-   <h3><a href="addMat" class="btn btn-info"><i class="fa fa-plus"></i> ajouter un matierel</a></h3>
-    <table class="table">
+  <h1>list of materials</h1>
+   <h2>Chosen department : ${depchoisi.titre}</h2><br/>
+   <h3><a href="addMat" class="btn btn-info"><i class="fa fa-plus"></i> add a material</a></h3>
+    <table class="table table-striped table-dark">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Titre</th>
+      <th scope="col">id</th>
+      <th scope="col">Title</th>
       <th scope="col">Serie</th>
-      <th scope="col">Quantite</th>
-      <th scope="col">Etat</th>
-      <th scope="col">Supprimer</th>
+      <th scope="col">Amount</th>
+      <th scope="col">State</th>
+      <th scope="col">delete</th>
     </tr>
   </thead>
   <tbody>
@@ -42,6 +42,9 @@
   
   </tbody>
 </table>
+    <form action="logout">
+ <button type="submit" class="btn btn-primary">logout</button>
   </div>
+  
 </body>
 </html>

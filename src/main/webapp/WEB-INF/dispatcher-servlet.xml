@@ -27,10 +27,16 @@
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"	>
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url"	value="jdbc:mysql://localhost:3306/materielDB" />
+		<property name="url" value="jdbc:mysql://localhost:3306/db?characterEncoding=utf8" />
 		<property name="username" value="root" />
 		<property name="password" value="" />
     </bean>
+    
+    
+     <!-- redirect url for failure of authentication -->
+ <bean id="simpleUrlAuthenticationFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+        <constructor-arg value="/login.jsp?error=1"></constructor-arg>
+</bean>
 
 <jpa:repositories base-package="tn.enig" />
   	
